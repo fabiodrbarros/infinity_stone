@@ -1,0 +1,52 @@
+/* Background matched to the user's Infinity Stone Matéria reference.
+   This viewport layer stays still; only foreground content can animate. */
+:root{--bg:#19191c;background:var(--bg)}
+body{padding:0;background:var(--bg)}
+#root{max-width:none;background:transparent;box-shadow:none;isolation:isolate}
+.fixed-ambient{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.honeycomb{position:absolute;width:440px;max-width:none;height:auto;opacity:.32}
+.honeycomb-top{top:-155px;right:-160px;mask-image:linear-gradient(140deg,transparent 20%,#000 85%)}
+.honeycomb-bottom{bottom:-170px;left:-160px;mask-image:linear-gradient(-35deg,transparent 15%,#000 90%)}
+main,footer{position:relative;z-index:1}
+main,.tura-hero,.tura-selection,.tura-contact-panel,.statement,.company-visual,.company-band{background:transparent}
+.tura-selection,.tura-contact-panel.embedded{border-top:0}
+.tura-hero{height:100svh}
+.header-home{justify-content:flex-end}
+.edge-links a{color:#fff;width:44px;height:44px}
+.edge-links svg{width:24px;height:24px}
+.edge-links{gap:10px}
+.header-scrolled{position:fixed;height:88px;margin:0;padding:0 48px;background:#19191cf5;border-bottom:1px solid #ffffff13;justify-content:space-between}
+.header-scrolled .brand{width:49px;height:58px}
+.header-collapsed .menu-toggle{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin-left:auto}
+.header-collapsed nav{position:absolute;top:100%;left:auto;right:0;width:280px;padding:24px 32px;background:#202023;box-shadow:0 18px 30px #0005;display:flex;flex-direction:column;align-items:stretch;gap:12px;max-height:calc(100dvh - 110px);overflow-y:auto;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-6px);transition:opacity 130ms var(--motion-out),transform 130ms var(--motion-out),visibility 0s 130ms}
+.header-collapsed nav.open{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0);transition-duration:180ms,180ms,0s;transition-delay:0s}
+.header-collapsed nav a{font-size:13px;padding-block:12px}
+.hero-logo{transition:opacity 180ms var(--motion-out)}
+.is-scrolled .hero-logo{opacity:0}
+@media(max-width:700px){
+  .header-scrolled{padding-inline:25px;height:80px}
+  .header-collapsed nav{width:min(320px,calc(100vw - 25px))}
+}
+.hero-logo{display:block;width:clamp(220px,25vw,340px);height:auto;margin:auto;filter:invert(1);mix-blend-mode:screen}
+.tura-title .hero-slogan{font-size:clamp(14px,1.3vw,18px);line-height:1.7;letter-spacing:.025em;text-transform:none;color:var(--paper);margin:32px 24px 0}
+/* Persistent surfaces let rapid scroll reversals retarget instead of remounting. */
+.header{position:fixed;margin:0;padding:0 48px;height:88px}
+.header::before{content:'';position:absolute;inset:0;background:#19191cf5;border-bottom:1px solid #ffffff13;opacity:0;transition:opacity 220ms var(--motion-out);z-index:-1;pointer-events:none}
+.header-scrolled{background:transparent;border:0}
+.header-scrolled::before{opacity:1}
+.header .brand{width:49px;height:58px;flex-shrink:0}
+.header-home:not(.header-scrolled) .brand{visibility:hidden;pointer-events:none}
+.header .menu-toggle{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin-left:auto;opacity:0;visibility:hidden;transform:scale(.95);transition:opacity 180ms var(--motion-out),transform 180ms var(--motion-out),visibility 0s 180ms}
+.header-collapsed .menu-toggle{opacity:1;visibility:visible;transform:scale(1);transition-delay:100ms,100ms,0s}
+.header:not(.header-collapsed) #navigation{display:none}
+.header nav.desktop-navigation{display:flex;position:absolute;top:0;bottom:0;right:48px;left:auto;width:auto;padding:0;background:none;box-shadow:none;flex-direction:row;align-items:center;gap:30px;overflow:visible;opacity:1;visibility:visible;pointer-events:auto;transform:translateX(0);transition:opacity 180ms var(--motion-out),transform 220ms var(--motion-out),visibility 0s}
+.header-collapsed nav.desktop-navigation{opacity:0;visibility:hidden;pointer-events:none;transform:translateX(12px);transition:opacity 180ms var(--motion-out),transform 220ms var(--motion-out),visibility 0s 220ms}
+.header nav.desktop-navigation a{font-size:10px}
+.header #navigation{transform-origin:top right}
+.hero-logo{transition:none}
+@media(max-width:700px){.header{padding-inline:25px;height:80px}.header nav.desktop-navigation{display:none}}
+@media(max-width:760px){
+  .honeycomb{width:300px}
+  .honeycomb-top{top:-100px;right:-160px}
+  .honeycomb-bottom{bottom:-125px;left:-165px}
+}

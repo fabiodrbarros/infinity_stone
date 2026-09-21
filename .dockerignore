@@ -1,0 +1,12 @@
+.git
+node_modules
+dist
+data
+public/uploads
+.env
+.env.*
+.impeccable
+.reference
+*.log
+tests
+scripts

@@ -1,0 +1,35 @@
+/* The source artwork uses a 1000 × 640 coordinate system. Keep it intact. */
+main:has(>.stone-hero){width:100%}
+.stone-hero{min-height:0;max-height:none;height:100svh;background:transparent;overflow:clip}
+.stone-composition{text-align:center;margin-top:-8px;width:100%}
+.stone-logo-slot{position:relative;width:clamp(266.2px,30.25vw,411.4px);max-width:100%;aspect-ratio:350/351;margin:auto}
+.stone-scene{isolation:isolate;position:absolute;left:50%;top:-4.666667%;width:1000px;height:640px;transform-origin:500px 0;transform:translate(-50%,var(--stone-shift,0px)) scale(var(--stone-scale,0));background:transparent;pointer-events:none}
+.stone-scene .piece{position:absolute;width:180px;height:300px;transform-origin:0 0;will-change:transform}
+.stone-scene .edge{position:absolute;inset:0;transform:translateY(7px);background:#bdbdc0}
+.stone-scene .surface{position:absolute;inset:0;background-size:100% 100%}
+.stone-scene .finish{opacity:0}
+.stone-scene .piece::after{content:'';position:absolute;inset:0;opacity:var(--depth,0);background:linear-gradient(120deg,#ffffff18,transparent 42%,#00000014);pointer-events:none}
+.stone-scene .wordmark{z-index:0;will-change:transform,opacity;position:absolute;left:50%;top:389px;transform:translateX(-50%);width:453px;max-width:none;height:auto;pointer-events:none}
+.stone-pieces{position:absolute;inset:0;z-index:2;pointer-events:none}
+.stone-scene .material-title{position:absolute;z-index:0;left:50%;top:-18px;width:800px;margin:0;text-align:center;transform:translate(-50%,190px);opacity:0;color:#171719;font-family:inherit;font-size:32px;line-height:1.2;font-weight:400;letter-spacing:-.03em;text-transform:uppercase;white-space:nowrap;pointer-events:none;will-change:transform,opacity}
+.stone-scene .material-title span{color:#6a6a70}
+@media(max-width:650px){.stone-scene .material-title{top:-44px;font-size:48px;line-height:1.15}}
+.stone-composition .hero-slogan{font-size:clamp(14px,1.3vw,18px);line-height:1.7;letter-spacing:.02em;font-weight:400;color:var(--paper);margin:32px 24px 0}
+@media(max-width:700px){.stone-composition{margin-top:-10px}.stone-composition .hero-slogan{font-size:clamp(10px,3vw,12px);margin-inline:8px}}
+@media(max-height:550px){.stone-composition{padding-top:70px}.stone-logo-slot{width:min(266.2px,48.4svh)}.stone-composition .hero-slogan{font-size:10px;margin-top:16px}}
+@media(prefers-reduced-motion:reduce){.stone-scene .piece,.stone-scene .wordmark,.stone-scene .material-title{will-change:auto}}
+.stone-scene .projects-title{position:absolute;z-index:0;left:50%;top:-18px;width:950px;margin:0;text-align:center;transform:translate(-50%,105px);opacity:0;visibility:hidden;color:#171719;font-family:inherit;font-size:32px;line-height:1.2;font-weight:400;letter-spacing:-.03em;text-transform:uppercase;white-space:nowrap;pointer-events:none}
+.stone-scene .projects-title span{color:#6a6a70}
+.hero-projects{position:absolute;left:0;top:95px;width:1000px;height:430px;z-index:3;pointer-events:auto;outline-offset:8px;clip-path:inset(0 50px)}
+.hero-projects[inert]{pointer-events:none}
+.hero-project-card{position:absolute;left:0;top:0;width:600px;height:390px;transform-origin:center;overflow:hidden;will-change:transform;box-shadow:0 18px 40px #0002;background:#d7d5d0;pointer-events:none;visibility:hidden}
+.hero-project-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-project-card::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 40%,#000a)}
+.hero-project-card strong{position:absolute;z-index:1;left:24px;right:24px;bottom:22px;text-align:center;color:#fff;font:600 38px/1.1 Jost,Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;text-wrap:balance}
+.hero-project-meta{position:absolute;z-index:8;top:545px;width:100%;text-align:center;opacity:0;visibility:hidden;pointer-events:auto}
+.hero-project-action{width:240px;margin:auto;transform:scale(calc(1 / var(--stone-scale)));transform-origin:top center}
+.hero-project-meta[inert]{pointer-events:none}
+@media(max-width:650px){.stone-scene .projects-title{font-size:34px}}
+@media(prefers-reduced-motion:reduce){.hero-project-card{will-change:auto}}
+.hero-corner-logo{position:fixed;z-index:25;right:24px;bottom:172px;width:64px;height:auto;opacity:0;visibility:hidden;pointer-events:none}
+@media(max-width:700px){.hero-corner-logo{right:8px;bottom:148px;width:44px}}

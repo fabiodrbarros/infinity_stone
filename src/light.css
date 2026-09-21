@@ -1,0 +1,130 @@
+/* White canvas, original artwork and corner geometry. */
+:root{color-scheme:light;--bg:#fff;--paper:#171719;--muted:#5c5c63;--line:#00000020;color:var(--paper);background:var(--bg)}
+body{background:var(--bg);color:var(--paper);isolation:isolate}
+.hero-logo,.brand img{filter:none;mix-blend-mode:normal}
+.honeycomb{filter:brightness(0);opacity:.6;width:650px}
+.honeycomb-top{top:-180px;left:-170px;right:auto}
+.honeycomb-bottom{bottom:-190px;left:-170px}
+@media(max-width:760px){
+  .honeycomb{width:440px}
+  .honeycomb-top{top:-110px;left:-175px;right:auto}
+  .honeycomb-bottom{bottom:-130px;left:-175px}
+}
+.honeycomb-top{mask-image:radial-gradient(ellipse 75% 75% at 15% 15%,#000 15%,#0009 48%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 75% 75% at 15% 15%,#000 15%,#0009 48%,transparent 100%)}
+.honeycomb-bottom{mask-image:radial-gradient(ellipse 75% 75% at 15% 85%,#000 15%,#0009 48%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 75% 75% at 15% 85%,#000 15%,#0009 48%,transparent 100%)}
+.tura-title .hero-slogan{text-transform:uppercase}
+.edge-links a,.edge-links a:hover{color:#000}
+.edge-scroll{color:#55555c}.edge-scroll span{background:#0005}
+.header::before{background:#fffffff5;border-bottom-color:#00000012}
+.header-collapsed #navigation{background:#fff;box-shadow:0 15px 35px #00000012}
+.header nav a,.header nav a:hover,.header nav a.active{color:#222}
+.header nav a.active:after{background:#222}
+.button,.button.secondary,.statement .button,.confirm .button{background:#ededee;color:#171719;box-shadow:4px 6px 12px #00000012,-3px -3px 10px #fff}
+.button:hover,.button.secondary:hover{background:#dedee0;color:#000}
+.contacts form{background:#ffffffb8;box-shadow:-7px 0 18px #00000005,5px 10px 20px #00000007}
+.contacts label,.contacts .form-note,.contacts input::placeholder,.contacts textarea::placeholder,.contact-item small,.contact-item>span,.gallery-controls,.tura-selection>.demo-note,.demo-note{color:#595960}
+input,textarea,select{color:#171719;caret-color:#171719}
+.contacts input,.contacts textarea,.services-list,.service-row,.search,.text-link,footer{border-color:#00000024}
+input:focus,textarea:focus,select:focus,.search:focus-within{border-bottom-color:#444}
+.admin input,.admin textarea,.admin select{background:#fff}
+.statement{color:#171719}
+.depth-copy h2{color:#171719;text-shadow:0 1px 8px #ffffffb0}
+.tura-title h1{text-shadow:none}
+.confirm{background:#fff;color:#171719}
+.notice{background:#edf5ee;color:#234c2a}
+.error{color:#a12222}
+::selection{background:#242426;color:#fff}
+:focus-visible{outline-color:#45454b}
+::-webkit-scrollbar-track{background:#fff}
+::-webkit-scrollbar-thumb{background:#aaa}
+/* Dedicated side rails keep decoration separate from readable content. */
+:root{--side-rail:clamp(120px,16vw,240px)}
+html{scroll-padding-top:120px}
+main a,main button,main input,main textarea,main select{scroll-margin-top:120px}
+.fixed-ambient{clip-path:inset(0);mask-image:linear-gradient(to right,#000, #000 calc(var(--side-rail) - 55px),transparent var(--side-rail),transparent calc(100% - var(--side-rail)),#000 calc(100% - var(--side-rail) + 55px),#000),linear-gradient(to top,transparent 155px,#000 260px);mask-composite:intersect}
+.honeycomb{width:650px}
+.honeycomb-top{left:-170px;right:auto;top:0}
+.honeycomb-bottom{left:-170px;bottom:-190px}
+main{width:calc(100% - 2 * var(--side-rail));margin-inline:auto}
+footer{margin-inline:calc(var(--side-rail) + 32px)}
+.header{padding-inline:calc(var(--side-rail) + 32px)}
+.header::before{display:none}
+.header nav.desktop-navigation{right:calc(var(--side-rail) + 32px);gap:24px}
+.header-collapsed #navigation{right:calc(var(--side-rail) + 32px)}
+.company-persistent{margin-left:auto;font-size:12px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;padding:14px 0}
+.header-collapsed .menu-toggle{margin-left:24px}
+.edge-links{position:fixed;left:auto;right:32px;bottom:40px;z-index:25}
+.edge-scroll-hint{position:fixed;left:46px;bottom:40px;display:flex;flex-direction:column;align-items:center;gap:10px;color:#171719;pointer-events:none}
+.edge-scroll-hint>span{writing-mode:vertical-rl;text-transform:uppercase;letter-spacing:.18em;font-size:9px;line-height:1}
+.edge-links .edge-scroll-hint svg{width:16px;height:16px;stroke-width:1.4;animation:scroll-hint-nudge 2.4s ease-in-out infinite}
+@keyframes scroll-hint-nudge{0%,70%,100%{transform:translateY(0)}35%{transform:translateY(6px)}}
+@media(prefers-reduced-motion:reduce){.edge-links .edge-scroll-hint svg{animation:none}}
+@media(max-width:700px){.edge-scroll-hint{left:10px;bottom:24px}}
+.section{padding-inline:32px}
+.page-hero{margin-inline:32px}
+.tura-selection{padding-inline:32px}
+.panel-top{left:32px;right:32px}
+.edge-scroll{right:32px}
+.contacts{padding-inline:32px;gap:32px}
+.contacts form{padding-inline:24px;min-width:0}
+.contacts>div{min-width:0}
+.contact-item>a{overflow-wrap:anywhere}
+.hero-logo{max-width:100%}
+.catalogue-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:1000px){
+  :root{--side-rail:80px}
+  .header nav.desktop-navigation{gap:16px}
+  .contacts{grid-template-columns:1fr;max-width:520px}
+}
+@media(max-width:700px){
+  :root{--side-rail:38px}
+
+  .fixed-ambient{clip-path:inset(0);mask-image:linear-gradient(to right,#000,transparent var(--side-rail),transparent calc(100% - var(--side-rail)),#000),linear-gradient(to top,transparent 130px,#000 215px)}
+  .honeycomb{width:440px}
+  .honeycomb-top{left:-175px;right:auto;top:0}
+  .honeycomb-bottom{left:-175px;bottom:-130px}
+  .header{padding-inline:24px}
+  .header-collapsed #navigation{right:24px;width:calc(100vw - 48px)}
+  .company-persistent{font-size:10px;letter-spacing:.05em}
+  .header-collapsed .menu-toggle{margin-left:12px}
+  .edge-links{left:auto;right:0;bottom:24px}
+  .edge-links a{width:36px;min-width:36px}
+  .edge-links svg{width:22px;height:22px}
+  .section,.contacts,.tura-selection{padding-inline:10px}
+  .page-hero{margin-inline:10px}
+  .page-hero h1{font-size:30px}
+  .panel-top{left:10px;right:10px}
+  .edge-scroll{right:10px}
+  .catalogue-grid{grid-template-columns:1fr}
+  .contacts form{padding-inline:16px}
+  .tura-title .hero-slogan{font-size:12px;margin-inline:8px}
+  footer{margin-inline:48px}
+  .detail-heading h1{font-size:30px;overflow-wrap:anywhere}
+}
+/* Header controls share the contact rail's centre line, mirrored at right. */
+.header{padding-inline:32px;z-index:70;pointer-events:none}
+.header a,.header button{pointer-events:auto}
+.header-on-footer .header{color:#fff}
+.header-on-footer .header .brand img{filter:invert(1)}
+.header .brand{width:44px}
+.header .menu-toggle{margin-right:0;padding:10px}
+.header nav.desktop-navigation{right:32px}
+.header-collapsed #navigation{right:32px}
+/* Scale the decorative cells with the viewport instead of cropping desktop cells. */
+@media(max-width:1000px){
+  .fixed-ambient{
+    --honeycomb-size:clamp(180px,min(58vw,70svh),440px);
+    --honeycomb-rail:clamp(48px,12vw,100px);
+    clip-path:inset(0);
+    mask-image:linear-gradient(to right,#000,transparent var(--honeycomb-rail),transparent calc(100% - var(--honeycomb-rail)),#000),linear-gradient(to top,transparent clamp(56px,12svh,100px),#000 clamp(110px,24svh,200px));
+  }
+  .honeycomb{width:var(--honeycomb-size)}
+  .honeycomb-top{left:calc(var(--honeycomb-size) * -.26);right:auto;top:0}
+  .honeycomb-bottom{left:calc(var(--honeycomb-size) * -.26);bottom:calc(var(--honeycomb-size) * -.12)}
+}
+@media(max-width:700px){
+  .header{padding-inline:0}
+  .header .brand{width:36px}
+  .header .menu-toggle{width:36px;min-width:36px;padding:7px}
+  .header-collapsed #navigation{right:12px;width:calc(100vw - 24px)}
+}

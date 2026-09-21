@@ -1,0 +1,12 @@
+import {chromium} from 'playwright';
+import assert from 'node:assert/strict';
+const browser=await chromium.launch({channel:'msedge'});
+const page=await browser.newPage({viewport:{width:1440,height:1000}});
+await page.goto('http://localhost:3000');
+const title=page.locator('.depth-copy h2');await title.waitFor();const before=await title.textContent();
+await page.getByRole('button',{name:'Seguinte',exact:true}).click();assert.notEqual(await title.textContent(),before);
+await page.getByRole('button',{name:'Anterior',exact:true}).click();assert.equal(await title.textContent(),before);
+await page.locator('.tura-selection .edge-scroll').click();assert.ok(page.url().endsWith('#contactar'));
+await page.locator('.depth-copy .button').click();await page.locator('.detail-heading h1').waitFor();
+assert.equal(await page.locator('.detail-heading h1').textContent(),before);
+await browser.close();console.log('PASS gallery previous/next, contact anchor, detail link.');

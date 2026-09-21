@@ -1,0 +1,45 @@
+:root{--motion-out:cubic-bezier(.23,1,.32,1);--motion-shift:cubic-bezier(.77,0,.175,1)}
+.button,.gallery-controls button,.menu-toggle,.admin-row button,.editor-heading button,.confirm button{transition:transform 140ms var(--motion-out),background-color 160ms ease,color 160ms ease}
+.button:active:not(:disabled),.gallery-controls button:active,.menu-toggle:active,.admin-row button:active,.editor-heading button:active,.confirm button:active:not(:disabled){transform:scale(.97)}
+.button svg,.text-link svg,.contact-nav svg,.card-arrow svg{transition:transform 180ms var(--motion-out)}
+.header nav a,.edge-links a,.filters button{transition:color 160ms ease,border-color 160ms ease}
+.header nav a:after{transition:opacity 160ms ease}
+.depth-main{transition:transform 220ms var(--motion-out)}
+.depth-stage img,.card-image img{transition:transform 220ms var(--motion-out),filter 180ms ease}
+.gallery-image-surface{position:relative;display:block;width:100%;height:100%;overflow:hidden}
+.gallery-image-surface img{display:block}
+.gallery-image-previous{position:absolute;inset:0;pointer-events:none}
+.depth-copy h2{min-height:1.05em}
+.depth-stage{touch-action:pan-y}
+input,textarea,select{transition:border-color 160ms ease}
+input:focus,textarea:focus,select:focus{border-bottom-color:#d1d1d5}
+.search:focus-within{border-bottom-color:#d1d1d5}
+.service-row h3 button svg{transition:transform 180ms var(--motion-out)}
+/* Neutralise legacy hover movement on all devices; opt in only for mice. */
+.depth-main:hover{transform:none}
+.depth-main:hover img{transform:none;filter:grayscale(1) brightness(.8)}
+.depth-side:hover img{filter:grayscale(1) brightness(.4) blur(1px)}
+.catalogue-card:hover img{transform:none;filter:grayscale(1) brightness(.68)}
+.catalogue-card.granite:hover img{filter:grayscale(1) brightness(.4)}
+@media(hover:hover) and (pointer:fine){
+  .depth-main:hover{transform:translateY(-3px)}
+  .depth-main:hover img{transform:scale(1.015);filter:grayscale(.8) brightness(.9)}
+  .depth-side:hover img{filter:grayscale(1) brightness(.6)}
+  .catalogue-card:hover img{transform:scale(1.025);filter:grayscale(1) brightness(.8)}
+  .button:hover svg,.text-link:hover svg,.contact-nav:hover svg,.catalogue-card:hover .card-arrow svg{transform:translate(2px,-2px)}
+}
+@media(max-width:700px){
+  .header nav{display:flex;flex-direction:column;gap:12px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-6px);transform-origin:top right;transition:opacity 130ms var(--motion-out),transform 130ms var(--motion-out),visibility 0s 130ms}
+  .header nav.open{display:flex;opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0);transition-duration:180ms,180ms,0s;transition-delay:0s}
+  .gallery-controls button,.menu-toggle,.edge-links a{min-width:44px;min-height:44px}
+  .edge-links{left:13px;gap:0}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .depth-main:hover,.depth-main:hover img,.catalogue-card:hover img,.button:active,.gallery-controls button:active,.menu-toggle:active,.admin-row button:active,.editor-heading button:active,.confirm button:active{transform:none!important}
+  .button svg,.text-link svg,.contact-nav svg,.card-arrow svg,.header nav{transform:none!important}
+}
+/* Keyboard users get the requested state immediately, including an in-flight
+   pointer transition interrupted by Tab, Escape, Space or Enter. */
+html[data-input="keyboard"] *,html[data-input="keyboard"] *::before,html[data-input="keyboard"] *::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+html[data-input="keyboard"] .button:active,html[data-input="keyboard"] .gallery-controls button:active,html[data-input="keyboard"] .menu-toggle:active{transform:none}

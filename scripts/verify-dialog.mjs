@@ -1,0 +1,20 @@
+import {chromium} from 'playwright';
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const browser=await chromium.launch({channel:'msedge'});
+const page=await browser.newPage();
+await page.goto('http://localhost:3000/admin');
+await page.getByLabel('Utilizador',{exact:true}).fill('admin');
+await page.getByLabel('Palavra-passe',{exact:true}).fill(readFileSync('data/acesso-local.txt','utf8').match(/Palavra-passe: (.+)/)[1].trim());
+await page.getByRole('button',{name:'Entrar',exact:true}).click();
+const trigger=page.getByRole('button',{name:'Eliminar Amet exterior',exact:true});
+await trigger.click();
+await page.locator('dialog[open]').waitFor();
+for(let i=0;i<4;i++){await page.keyboard.press('Tab');assert.ok(await page.evaluate(()=>document.activeElement.closest('dialog')||document.activeElement===document.body));}
+await page.keyboard.press('Shift+Tab');
+assert.ok(await page.evaluate(()=>!!document.activeElement.closest('dialog')));
+await page.keyboard.press('Escape');
+await page.locator('dialog').waitFor({state:'detached'});
+assert.equal(await trigger.evaluate(e=>e===document.activeElement),true);
+await page.getByRole('button',{name:'Terminar sessão'}).click();
+await browser.close();console.log('PASS native modal focus containment, Escape and restored focus.');

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+data/
+.env
+*.log
+public/uploads/
+.reference/
+
+.impeccable/
+.env.*
+!.env.example
+*.sqlite*

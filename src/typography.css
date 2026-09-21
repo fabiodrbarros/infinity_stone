@@ -1,0 +1,8 @@
+/* Visual matches, not verified original logo font identities.
+   Locally hosted SIL OFL fonts; the supplied logo remains unchanged. */
+@font-face{font-family:Jost;src:url('/assets/jost-variable.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:Michroma;src:url('/assets/michroma-regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+:root{font-family:Jost,Arial,sans-serif}
+.panel-top>span,footer .footer-name{font-family:Michroma,Jost,sans-serif;font-weight:400;letter-spacing:.12em;line-height:1.5}
+.tura-title .hero-slogan{font-weight:400;letter-spacing:.02em}
+.contacts form h2{white-space:normal}
