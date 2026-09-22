@@ -40,7 +40,7 @@ function Header({scrolled=false}){const [open,setOpen]=useState(false);const loc
 useEffect(()=>{setOpen(false);window.scrollTo(0,0);document.title=loc.pathname==="/"?"INFINITY STONE | Pedra Natural · Transformação · Elegância":(({"/":"Home","/empresa":"Empresa","/catalogo":"Catálogo","/projetos":"Projetos","/contactos":"Contactos","/admin":"Administração"})[loc.pathname]||(loc.pathname.startsWith("/catalogo/")?"Catálogo":"Página não encontrada"))+" | INFINITY STONE";},[loc.pathname]);
 
 return <><header className={"header header-collapsed "+(loc.pathname==="/"?"header-home ":"")+(scrolled?"header-scrolled":"")}>
-{!["/contactos","/empresa","/projetos","/catalogo"].includes(loc.pathname)&&!loc.pathname.startsWith("/catalogo/")&&<Link to="/" aria-hidden={loc.pathname==="/"&&!scrolled?true:undefined} tabIndex={loc.pathname==="/"&&!scrolled?-1:undefined} aria-label="Infinity Stone — início" className="brand"><img src="/assets/logo.png" alt="Infinity Stone"/></Link>}
+{!["/","/contactos","/empresa","/projetos","/catalogo"].includes(loc.pathname)&&!loc.pathname.startsWith("/catalogo/")&&<Link to="/" aria-hidden={loc.pathname==="/"&&!scrolled?true:undefined} tabIndex={loc.pathname==="/"&&!scrolled?-1:undefined} aria-label="Infinity Stone — início" className="brand"><img src="/assets/logo.png" alt="Infinity Stone"/></Link>}
 <NavLink to="/empresa" className="company-persistent">A Infinity Stone</NavLink><button className="menu-toggle" aria-expanded={open} aria-controls={open?"navigation":undefined} aria-haspopup="dialog" aria-label="Abrir menu" onClick={()=>setOpen(true)}><Menu aria-hidden="true"/></button></header>
 {open&&<MenuDrawer onClose={()=>setOpen(false)}/>}</>;}
 function Footer(){return <footer className="site-footer">
