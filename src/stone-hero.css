@@ -1,6 +1,6 @@
 /* The source artwork uses a 1000 × 640 coordinate system. Keep it intact. */
 main:has(>.stone-hero){width:100%}
-.stone-hero{min-height:0;max-height:none;height:100svh;background:transparent;overflow:clip}
+.stone-hero{min-height:0;max-height:none;height:100svh;height:100dvh;background:transparent;overflow:clip}
 .stone-composition{text-align:center;margin-top:-8px;width:100%}
 .stone-logo-slot{position:relative;width:clamp(266.2px,30.25vw,411.4px);max-width:100%;aspect-ratio:350/351;margin:auto}
 .stone-scene{isolation:isolate;position:absolute;left:50%;top:-4.666667%;width:1000px;height:640px;transform-origin:500px 0;transform:translate(-50%,var(--stone-shift,0px)) scale(var(--stone-scale,0));background:transparent;pointer-events:none}
