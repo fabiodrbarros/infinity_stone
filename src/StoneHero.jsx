@@ -14,10 +14,9 @@ export default function StoneHero({items=[]}){
     const hero=root.current, scene=hero.querySelector('.stone-scene');
     const slogan=hero.querySelector('.hero-slogan');
     const cornerLogo=cornerLogoRef.current;
-    const updateLogoContrast=()=>{
-      const rect=cornerLogo.getBoundingClientRect();
-      const footer=document.querySelector('.site-footer');
-      cornerLogo.style.filter=footer&&footer.getBoundingClientRect().top<rect.top+rect.height/2?'invert(1)':'none';
+    const updateLogoVisibility=()=>{
+      const insideHero=Math.abs(hero.getBoundingClientRect().top)<=2;
+      cornerLogo.style.visibility=insideHero&&Number(cornerLogo.style.opacity)>0?'visible':'hidden';
     };
     const renderArt=createRenderer([...hero.querySelectorAll('.piece')],hero.querySelector('.wordmark'),hero.querySelector('.material-title'));
     const renderProjects=createProjectRenderer(hero,projects);
@@ -55,7 +54,7 @@ export default function StoneHero({items=[]}){
       }
       cornerLogo.style.opacity=logoOpacity;
       cornerLogo.style.transform=`translateX(${logoX}px)`;
-      cornerLogo.style.visibility=logoOpacity>0?'visible':'hidden';
+      updateLogoVisibility();
       hero.dataset.state=busy?'transitioning':value>=2?'projects':value===1?'materials':'logo';
     }
     function finish(){
@@ -153,9 +152,9 @@ export default function StoneHero({items=[]}){
       projectScale=Math.min(hero.clientWidth/1050,hero.clientHeight/700,1.25,finalScale*826/900);
       projectShift=(hero.clientHeight-640*projectScale)/2-originalTop;
       render(progress);
-      updateLogoContrast();
+      updateLogoVisibility();
     }
-    window.addEventListener('scroll',updateLogoContrast,{...options,passive:true});
+    window.addEventListener('scroll',updateLogoVisibility,{...options,passive:true});
     window.addEventListener('wheel',wheel,{...options,passive:false});
     window.addEventListener('keydown',keydown,options);
     window.addEventListener('keyup',()=>{keyConsumed=null;},options);

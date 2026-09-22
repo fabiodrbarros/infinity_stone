@@ -34,7 +34,13 @@ export default function CompanyPage(){
         chapters[1].offsetLeft-chapters[0].offsetLeft;
       // Move one intact, upright logo between the two columns.
       const x=mobile?distance*(1-2*second+2*third):distance*(-second+third);
-      mark.current.style.transform=`translate3d(${x}px,0,0)`;
+      const emblem=mark.current.parentElement;
+      const leaving=Math.max(0,-chapters[2].getBoundingClientRect().top);
+      // Hold the logo in place while leaving the last chapter, then fade it out.
+      const y=leaving>0?Math.max(0,parseFloat(getComputedStyle(emblem).top)-emblem.getBoundingClientRect().top):0;
+      mark.current.style.transform=`translate3d(${x}px,${y}px,0)`;
+      mark.current.style.opacity=preference.matches?Number(leaving<=2):1-ease(clamp(leaving/100));
+      mark.current.style.visibility=leaving>=100?'hidden':'visible';
       chapters.slice(1).forEach((chapter,index)=>{
         const amount=index===0?second:third;
         chapter.style.setProperty('--copy-x',`${preference.matches?0:(index===0?1:-1)*(mobile?36:100)*(1-amount)}px`);
