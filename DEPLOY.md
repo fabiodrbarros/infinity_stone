@@ -74,3 +74,21 @@ docker compose start website
 Guardar os backups fora do Git e fora da VPS. Antes de publicar, substituir os
 projetos demonstrativos. O formulário de contacto abre a aplicação de email;
 não envia mensagens através de SMTP.
+
+
+## Idiomas e revisão de traduções
+
+O menu permite escolher PT, EN ou FR. A preferência mantém-se neste navegador.
+Os textos fixos incluem traduções EN/FR. No admin, **Traduzir e rever** permite selecionar o idioma e os textos do site ou um conteúdo específico, gerar uma proposta, editar, guardar rascunho e publicar a revisão.
+
+Para gerar propostas automáticas de novos conteúdos, adicione uma chave **DeepL API Free ou Pro** ao `.env` da VPS:
+
+```dotenv
+DEEPL_API_KEY=
+```
+
+Preencha o valor apenas no servidor e recrie o serviço com `docker compose up -d --build`. A chave não é enviada ao navegador. A geração envia os textos portugueses selecionados à API DeepL; o custo/quota depende da conta. Documentação: https://developers.deepl.com/docs/api-reference/translate
+
+Sem chave, o site continua a funcionar nos três idiomas, os textos fixos usam as traduções incluídas e as traduções de conteúdos podem ser introduzidas manualmente. Os conteúdos sem tradução publicada usam o original português. As propostas nunca são publicadas automaticamente. **Publicar revisão** publica os campos preenchidos do grupo selecionado. Alterações no original invalidam a tradução anterior desse campo até nova revisão.
+
+Rascunhos e traduções publicadas ficam na mesma base SQLite do volume persistente `/data`, incluídos nas cópias de segurança existentes.

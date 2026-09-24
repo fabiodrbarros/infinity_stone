@@ -1,3 +1,4 @@
+import {useI18n} from './i18n.jsx';
 import React,{useLayoutEffect,useRef} from 'react';
 import './company-page.css';
 import {useCompanySectionScroll} from './useCompanySectionScroll.js';
@@ -14,6 +15,7 @@ function StoneProcessIcon({step}){
 }
 
 export default function CompanyPage(){
+  const {t}=useI18n();
   const root=useRef(),mark=useRef();
   useCompanySectionScroll(root);
   useLayoutEffect(()=>{
@@ -56,23 +58,23 @@ export default function CompanyPage(){
   return <div ref={root} className="company-story">
     <div className="company-journey">
       <section className="company-chapter company-opening" aria-labelledby="company-heading">
-        <span className="company-eyebrow">A nossa essência</span>
-        <h1 id="company-heading"><span className="company-heading-line">Da natureza, a matéria.</span><span className="company-heading-line">Da transformação, o espaço.</span></h1>
-        <p>Somos especializados na produção e corte de pedra natural, desenvolvendo soluções à medida para construção, decoração e design de interiores e exteriores. Trabalhamos cada material de acordo com as exigências de cada aplicação, combinando experiência, tecnologia e conhecimento técnico para garantir um resultado cuidado em todas as etapas.</p>
-        <div className="company-signature">Pedra Natural <span>·</span> Transformação <span>·</span> Elegância</div>
+        <span className="company-eyebrow">{t("A nossa essência")}</span>
+        <h1 id="company-heading"><span className="company-heading-line">{t("Da natureza, a matéria.")}</span><span className="company-heading-line">{t("Da transformação, o espaço.")}</span></h1>
+        <p>{t("Somos especializados na produção e corte de pedra natural, desenvolvendo soluções à medida para construção, decoração e design de interiores e exteriores. Trabalhamos cada material de acordo com as exigências de cada aplicação, combinando experiência, tecnologia e conhecimento técnico para garantir um resultado cuidado em todas as etapas.")}</p>
+        <div className="company-signature">{t("Pedra Natural")} <span>·</span> {t("Transformação")} <span>·</span> {t("Elegância")}</div>
       </section>
       <figure className="company-emblem"><img ref={mark} src="/assets/logo.png" alt="Infinity Stone" width="350" height="351"/></figure>
       <section className="company-chapter" aria-labelledby="company-matter">
-        <span className="company-eyebrow">A matéria</span>
-        <h2 id="company-matter"><span className="company-heading-line">A natureza não se repete.</span><span className="company-heading-line">A pedra também não.</span></h2>
-        <p>Trabalhamos cada pedra como um elemento capaz de definir a identidade de um espaço. Os veios, as tonalidades e as texturas tornam cada material único, permitindo-nos criar soluções que reforçam o carácter de cada ambiente.</p>
+        <span className="company-eyebrow">{t("A matéria")}</span>
+        <h2 id="company-matter"><span className="company-heading-line">{t("A natureza não se repete.")}</span><span className="company-heading-line">{t("A pedra também não.")}</span></h2>
+        <p>{t("Trabalhamos cada pedra como um elemento capaz de definir a identidade de um espaço. Os veios, as tonalidades e as texturas tornam cada material único, permitindo-nos criar soluções que reforçam o carácter de cada ambiente.")}</p>
       </section>
       <section className="company-chapter" aria-labelledby="company-space">
-        <span className="company-eyebrow">O processo</span>
-        <h2 id="company-space">A pedra é natural.<br/><span>O espaço é seu.</span></h2>
-        <p>Cada trabalho começa pela compreensão do que é necessário. A partir daí, ajudamos a identificar as soluções mais adequadas ao material, às medidas, ao acabamento e à aplicação pretendida, preparando cada peça para o resultado final.</p>
-        <ol className="company-process" aria-label="Etapas de cada trabalho">
-          {[['analysis','Análise'],['advice','Aconselhamento'],['cutting','Corte'],['finishing','Acabamento'],['solution','Solução final']].map(([step,label])=><li key={step}><StoneProcessIcon step={step}/><span>{label}</span></li>)}
+        <span className="company-eyebrow">{t("O processo")}</span>
+        <h2 id="company-space">{t("A pedra é natural.")}<br/><span>{t("O espaço é seu.")}</span></h2>
+        <p>{t("Cada trabalho começa pela compreensão do que é necessário. A partir daí, ajudamos a identificar as soluções mais adequadas ao material, às medidas, ao acabamento e à aplicação pretendida, preparando cada peça para o resultado final.")}</p>
+        <ol className="company-process" aria-label={t("Etapas de cada trabalho")}>
+          {[['analysis','Análise'],['advice','Aconselhamento'],['cutting','Corte'],['finishing','Acabamento'],['solution','Solução final']].map(([step,label])=><li key={step}><StoneProcessIcon step={step}/><span>{t(label)}</span></li>)}
         </ol>
       </section>
     </div>

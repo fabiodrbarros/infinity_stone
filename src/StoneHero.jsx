@@ -1,3 +1,4 @@
+import {useI18n} from './i18n.jsx';
 import React,{useLayoutEffect,useRef,useMemo} from 'react';
 import {createPortal} from 'react-dom';
 import {Link} from 'react-router-dom';
@@ -7,8 +8,9 @@ import {createProjectRenderer} from './hero-projects.js';
 import './stone-hero.css';
 
 export default function StoneHero({items=[]}){
+  const {t}=useI18n();
   const projects=useMemo(()=>items.filter(item=>item.type==='projeto'),[items]);
-  const root=useRef();
+  const root=useRef(),savedProgress=useRef(0);
   const cornerLogoRef=useRef();
   useLayoutEffect(()=>{
     const hero=root.current, scene=hero.querySelector('.stone-scene');
@@ -23,7 +25,7 @@ export default function StoneHero({items=[]}){
     const gallery=hero.querySelector('.hero-projects');
     const reduced=matchMedia('(prefers-reduced-motion: reduce)');
     const controller=new AbortController(), options={signal:controller.signal};
-    let progress=0,target=0,frame=0,busy=false,initialScale=1,finalScale=1,finalShift=0,projectScale=1,projectShift=0,keyboardNavigation=false,transitionFrom=0;
+    let progress=Math.min(savedProgress.current,projects.length?projects.length+1:1),target=progress,frame=0,busy=false,initialScale=1,finalScale=1,finalShift=0,projectScale=1,projectShift=0,keyboardNavigation=false,transitionFrom=0;
     const last=projects.length?projects.length+1:1;
     let lastWheel=-Infinity,wheelConsumed=false,wheelEligible=false,wheelTotal=0,keyConsumed=null,touch=null;
     let departingProject=null;
@@ -161,21 +163,21 @@ export default function StoneHero({items=[]}){
     reduced.addEventListener('change',()=>{if(reduced.matches&&busy)finish();},options);
     const observer=new ResizeObserver(resize);observer.observe(hero);
     resize();
-    return()=>{controller.abort();observer.disconnect();cancelAnimationFrame(frame);};
+    return()=>{controller.abort();observer.disconnect();cancelAnimationFrame(frame);savedProgress.current=target;};
   },[projects]);
-  return <section ref={root} className="tura-hero stone-hero" aria-label="Infinity Stone — Pedra natural">
+  return <section ref={root} className="tura-hero stone-hero" aria-label={t("Infinity Stone — Pedra natural")}>
     <div className="stone-composition">
       <h1 className="sr-only">Infinity Stone</h1>
       <div className="stone-logo-slot">
         <div className="stone-scene">
           <img className="wordmark" src="/assets/hero-animation/0.png" alt="" width="302" height="87"/>
-          <div className="material-title" aria-hidden="true">A pedra natural reflete<br/><span>a singularidade da natureza.</span></div>
-          <h2 className="projects-title"><span className="projects-heading-desktop">Cada projeto nasce de uma relação única<br/><span>entre matéria e espaço.</span></span><span className="projects-heading-mobile">Cada projeto nasce de uma relação<br/><span>única entre matéria e espaço.</span></span></h2>
+          <div className="material-title" aria-hidden="true">{t("A pedra natural reflete")}<br/><span>{t("a singularidade da natureza.")}</span></div>
+          <h2 className="projects-title"><span className="projects-heading-desktop">{t("Cada projeto nasce de uma relação única")}<br/><span>{t("entre matéria e espaço.")}</span></span><span className="projects-heading-mobile">{t("Cada projeto nasce de uma relação")}<br/><span>{t("única entre matéria e espaço.")}</span></span></h2>
           <div className="stone-pieces" aria-hidden="true">{textures.map((url,i)=><div className="piece" key={url}>
             <div className="edge"/><div className="surface first" style={{backgroundImage:`url(${url})`}}/>
             <div className="surface finish" style={{backgroundImage:`url(${finalTextures[i]})`}}/>
           </div>)}</div>
-          <div className="hero-projects" tabIndex={0} role="region" aria-roledescription="carrossel" aria-label="Projetos">
+          <div className="hero-projects" tabIndex={0} role="region" aria-roledescription={t("carrossel")} aria-label={t("Projetos")}>
             {projects.length>0&&Array.from({length:projects.length+4},(_,i)=>i-2).map(slot=>{
               const item=projects[((slot%projects.length)+projects.length)%projects.length];
               return <div className="hero-project-card" data-slot={slot} key={slot}>
@@ -183,10 +185,10 @@ export default function StoneHero({items=[]}){
               </div>;
             })}
           </div>
-          <div className="hero-project-meta"><div className="hero-project-action"><Link className="button" to="/projetos">Ver projetos<ArrowUpRight aria-hidden="true" size={17}/></Link></div></div>
+          <div className="hero-project-meta"><div className="hero-project-action"><Link className="button" to="/projetos">{t("Ver projetos")}<ArrowUpRight aria-hidden="true" size={17}/></Link></div></div>
         </div>
       </div>
-      <p className="hero-slogan">DA NATUREZA NASCE A MATÉRIA.<br/>DA TRANSFORMAÇÃO NASCE O ESPAÇO.</p>
+      <p className="hero-slogan">{t("DA NATUREZA NASCE A MATÉRIA.")}<br/>{t("DA TRANSFORMAÇÃO NASCE O ESPAÇO.")}</p>
     </div>
     {createPortal(<img ref={cornerLogoRef} className="hero-corner-logo" src="/assets/logo.png" alt="" aria-hidden="true" width="350" height="351"/>,document.body)}
   </section>;

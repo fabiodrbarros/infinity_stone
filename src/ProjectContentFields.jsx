@@ -1,6 +1,8 @@
+import {useI18n} from './i18n.jsx';
 import React from 'react';
 
 export default function ProjectContentFields({item,setItem,busy,setBusy,setError}){
+  const {t}=useI18n();
   const materials=item.materials||[],images=item.images||[];
   function changeMaterial(index,patch){setItem(old=>({...old,materials:(old.materials||[]).map((m,i)=>i===index?{...m,...patch}:m)}));}
   async function upload(event,materialIndex=null){
@@ -19,18 +21,18 @@ export default function ProjectContentFields({item,setItem,busy,setBusy,setError
     }catch(error){setError(error.message);}finally{setBusy(false);}
   }
   return <fieldset className="project-content-fields" disabled={busy}>
-    <legend>Fotografias e materiais do projeto</legend>
-    <p>A imagem principal é a capa. Acrescente outras fotografias e os materiais utilizados.</p>
-    <div className="project-admin-photos">{images.map((src,i)=><div key={`${src}-${i}`}><img src={src} alt={`Fotografia adicional ${i+1}`}/><button type="button" onClick={()=>setItem(old=>({...old,images:old.images.filter((_,n)=>n!==i)}))}>Remover fotografia {i+1}</button></div>)}</div>
-    <label>Adicionar fotografias<input type="file" accept="image/jpeg,image/png,image/webp" multiple onChange={upload}/></label>
+    <legend>{t("Fotografias e materiais do projeto")}</legend>
+    <p>{t("A imagem principal é a capa. Acrescente outras fotografias e os materiais utilizados.")}</p>
+    <div className="project-admin-photos">{images.map((src,i)=><div key={`${src}-${i}`}><img src={src} alt={t("Fotografia adicional {number}",{number:i+1})}/><button type="button" onClick={()=>setItem(old=>({...old,images:old.images.filter((_,n)=>n!==i)}))}>{t("Remover fotografia {number}",{number:i+1})}</button></div>)}</div>
+    <label>{t("Adicionar fotografias")}<input type="file" accept="image/jpeg,image/png,image/webp" multiple onChange={upload}/></label>
     {materials.map((m,i)=><div className="project-admin-material" key={i}>
-      <label>Nome do material<input required maxLength={80} value={m.name} onChange={e=>changeMaterial(i,{name:e.target.value})}/></label>
-      <div className="two-fields"><label>Formato<input maxLength={120} value={m.format||''} onChange={e=>changeMaterial(i,{format:e.target.value})}/></label><label>Acabamento<input maxLength={120} value={m.finish||''} onChange={e=>changeMaterial(i,{finish:e.target.value})}/></label></div>
-      <label>Espessura<input maxLength={120} value={m.thickness||''} onChange={e=>changeMaterial(i,{thickness:e.target.value})}/></label>
-      {m.image&&<><img className="project-admin-swatch" src={m.image} alt={m.name}/><button type="button" onClick={()=>changeMaterial(i,{image:''})}>Remover imagem do material</button></>}
-      <label>Fotografia do material<input type="file" accept="image/jpeg,image/png,image/webp" onChange={e=>upload(e,i)}/></label>
-      <button type="button" onClick={()=>setItem(old=>({...old,materials:old.materials.filter((_,n)=>n!==i)}))}>Remover material</button>
+      <label>{t("Nome do material")}<input required maxLength={80} value={m.name} onChange={e=>changeMaterial(i,{name:e.target.value})}/></label>
+      <div className="two-fields"><label>{t("Formato")}<input maxLength={120} value={m.format||''} onChange={e=>changeMaterial(i,{format:e.target.value})}/></label><label>{t("Acabamento")}<input maxLength={120} value={m.finish||''} onChange={e=>changeMaterial(i,{finish:e.target.value})}/></label></div>
+      <label>{t("Espessura")}<input maxLength={120} value={m.thickness||''} onChange={e=>changeMaterial(i,{thickness:e.target.value})}/></label>
+      {m.image&&<><img className="project-admin-swatch" src={m.image} alt={m.name}/><button type="button" onClick={()=>changeMaterial(i,{image:''})}>{t("Remover imagem do material")}</button></>}
+      <label>{t("Fotografia do material")}<input type="file" accept="image/jpeg,image/png,image/webp" onChange={e=>upload(e,i)}/></label>
+      <button type="button" onClick={()=>setItem(old=>({...old,materials:old.materials.filter((_,n)=>n!==i)}))}>{t("Remover material")}</button>
     </div>)}
-    <button type="button" disabled={materials.length>=12} onClick={()=>setItem(old=>({...old,materials:[...(old.materials||[]),{name:'',image:'',format:'',finish:'',thickness:''}]}))}>Adicionar material</button>
+    <button type="button" disabled={materials.length>=12} onClick={()=>setItem(old=>({...old,materials:[...(old.materials||[]),{name:'',image:'',format:'',finish:'',thickness:''}]}))}>{t("Adicionar material")}</button>
   </fieldset>;
 }

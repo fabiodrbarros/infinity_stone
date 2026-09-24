@@ -12,6 +12,7 @@ services:
       DATA_DIR: /data
       UPLOADS_DIR: /data/uploads
       APP_ORIGIN: ${APP_ORIGIN:?Define APP_ORIGIN no ficheiro .env}
+      DEEPL_API_KEY: ${DEEPL_API_KEY:-}
       TRUST_PROXY: "1"
       ADMIN_USER: ${ADMIN_USER:-admin}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Define ADMIN_PASSWORD no ficheiro .env}

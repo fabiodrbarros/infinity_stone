@@ -1,3 +1,4 @@
+import {registerTranslations} from './translations.js';
 import express from 'express';
 import {validateDetails,withDetails} from './project-details.js';
 import helmet from 'helmet';
@@ -34,6 +35,7 @@ app.post('/api/admin/catalogue',auth,(req,res)=>{const values=validate(req.body)
 app.put('/api/admin/catalogue/:id',auth,(req,res)=>{const values=validate(req.body);if(!values)return res.status(400).json({error:'Verifique os campos e a imagem.'});const r=db.prepare('UPDATE items SET title=?,type=?,material=?,description=?,image=?,published=?,details=? WHERE id=?').run(...values,req.params.id);if(!r.changes)return res.status(404).json({error:'Entrada não encontrada.'});res.json({ok:true});});
 app.delete('/api/admin/catalogue/:id',auth,(req,res)=>{const r=db.prepare('DELETE FROM items WHERE id=?').run(req.params.id);if(!r.changes)return res.status(404).json({error:'Entrada não encontrada.'});res.json({ok:true});});
 app.post('/api/admin/upload',auth,(req,res)=>{const value=req.body?.data;if(typeof value!=='string')return res.status(400).json({error:'Imagem inválida.'});const match=value.match(/^data:image\/(jpeg|png|webp);base64,([A-Za-z0-9+/=]+)$/);if(!match)return res.status(400).json({error:'Escolha uma imagem JPG, PNG ou WebP.'});const bytes=Buffer.from(match[2],'base64');const valid=match[1]==='jpeg'?bytes[0]===255&&bytes[1]===216:match[1]==='png'?bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])):bytes.toString('ascii',0,4)==='RIFF'&&bytes.toString('ascii',8,12)==='WEBP';if(!valid||bytes.length>5*1024*1024)return res.status(400).json({error:'Imagem inválida ou superior a 5 MB.'});mkdirSync(uploads,{recursive:true});const name=`${randomBytes(16).toString('hex')}.${match[1]}`;writeFileSync(path.join(uploads,name),bytes);res.json({image:`/uploads/${name}`});});
+registerTranslations(app,db,auth);
 app.get('/api/health',(req,res)=>{db.prepare('SELECT 1').get();res.json({ok:true});});
 app.use('/api',(req,res)=>res.status(404).json({error:'Recurso não encontrado.'}));
 app.use('/uploads',express.static(uploads));

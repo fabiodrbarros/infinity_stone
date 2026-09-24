@@ -1,0 +1,874 @@
+{
+  "Home": {
+    "en": "Home",
+    "fr": "Accueil"
+  },
+  "Projetos": {
+    "en": "Projects",
+    "fr": "Projets"
+  },
+  "Projeto": {
+    "en": "Project",
+    "fr": "Projet"
+  },
+  "Produto": {
+    "en": "Product",
+    "fr": "Produit"
+  },
+  "Produtos e projetos": {
+    "en": "Products and projects",
+    "fr": "Produits et projets"
+  },
+  "A Infinity Stone": {
+    "en": "About Infinity Stone",
+    "fr": "À propos d’Infinity Stone"
+  },
+  "Contactos": {
+    "en": "Contact",
+    "fr": "Contact"
+  },
+  "Empresa": {
+    "en": "About us",
+    "fr": "L’entreprise"
+  },
+  "Catálogo": {
+    "en": "Catalogue",
+    "fr": "Catalogue"
+  },
+  "Administração": {
+    "en": "Administration",
+    "fr": "Administration"
+  },
+  "Menu principal": {
+    "en": "Main menu",
+    "fr": "Menu principal"
+  },
+  "Navegação principal": {
+    "en": "Main navigation",
+    "fr": "Navigation principale"
+  },
+  "Fechar menu": {
+    "en": "Close menu",
+    "fr": "Fermer le menu"
+  },
+  "Abrir menu": {
+    "en": "Open menu",
+    "fr": "Ouvrir le menu"
+  },
+  "Infinity Stone — início": {
+    "en": "Infinity Stone — home",
+    "fr": "Infinity Stone — accueil"
+  },
+  "Infinity Stone — Home": {
+    "en": "Infinity Stone — home",
+    "fr": "Infinity Stone — accueil"
+  },
+  "Telefone": {
+    "en": "Phone",
+    "fr": "Téléphone"
+  },
+  "Chamada para rede móvel nacional": {
+    "en": "Portuguese mobile network call",
+    "fr": "Appel vers le réseau mobile portugais"
+  },
+  "Explorar": {
+    "en": "Explore",
+    "fr": "Explorer"
+  },
+  "Navegação do rodapé": {
+    "en": "Footer navigation",
+    "fr": "Navigation de pied de page"
+  },
+  "Livro de Reclamações": {
+    "en": "Complaints book",
+    "fr": "Livre de réclamations"
+  },
+  "Da natureza nasce a matéria.": {
+    "en": "Matter is born from nature.",
+    "fr": "De la nature naît la matière."
+  },
+  "Da transformação nasce o espaço": {
+    "en": "Space is born from transformation.",
+    "fr": "De la transformation naît l’espace."
+  },
+  "DA NATUREZA NASCE A MATÉRIA.": {
+    "en": "MATTER IS BORN FROM NATURE.",
+    "fr": "DE LA NATURE NAÎT LA MATIÈRE."
+  },
+  "DA TRANSFORMAÇÃO NASCE O ESPAÇO.": {
+    "en": "SPACE IS BORN FROM TRANSFORMATION.",
+    "fr": "DE LA TRANSFORMATION NAÎT L’ESPACE."
+  },
+  "Pedra Natural · Transformação · Elegância": {
+    "en": "Natural Stone · Transformation · Elegance",
+    "fr": "Pierre naturelle · Transformation · Élégance"
+  },
+  "Saltar para conteúdo": {
+    "en": "Skip to content",
+    "fr": "Aller au contenu"
+  },
+  "Telefonar para Infinity Stone": {
+    "en": "Call Infinity Stone",
+    "fr": "Appeler Infinity Stone"
+  },
+  "Enviar email": {
+    "en": "Send email",
+    "fr": "Envoyer un e-mail"
+  },
+  "Scroll": {
+    "en": "Scroll",
+    "fr": "Défiler"
+  },
+  "Tentar novamente": {
+    "en": "Try again",
+    "fr": "Réessayer"
+  },
+  "A carregar catálogo…": {
+    "en": "Loading catalogue…",
+    "fr": "Chargement du catalogue…"
+  },
+  "Não foi possível carregar. Tente novamente.": {
+    "en": "Unable to load. Please try again.",
+    "fr": "Chargement impossible. Veuillez réessayer."
+  },
+  "Página não encontrada.": {
+    "en": "Page not found.",
+    "fr": "Page introuvable."
+  },
+  "O endereço pode ter mudado ou a entrada já não está publicada.": {
+    "en": "The address may have changed or this entry is no longer published.",
+    "fr": "L’adresse a peut-être changé ou ce contenu n’est plus publié."
+  },
+  "Voltar ao início": {
+    "en": "Back to home",
+    "fr": "Retour à l’accueil"
+  },
+  "A nossa essência": {
+    "en": "Our essence",
+    "fr": "Notre essence"
+  },
+  "Da natureza, a matéria.": {
+    "en": "From nature, matter.",
+    "fr": "De la nature, la matière."
+  },
+  "Da transformação, o espaço.": {
+    "en": "From transformation, space.",
+    "fr": "De la transformation, l’espace."
+  },
+  "Pedra Natural": {
+    "en": "Natural Stone",
+    "fr": "Pierre naturelle"
+  },
+  "Transformação": {
+    "en": "Transformation",
+    "fr": "Transformation"
+  },
+  "Elegância": {
+    "en": "Elegance",
+    "fr": "Élégance"
+  },
+  "A matéria": {
+    "en": "The material",
+    "fr": "La matière"
+  },
+  "A natureza não se repete.": {
+    "en": "Nature never repeats itself.",
+    "fr": "La nature ne se répète pas."
+  },
+  "A pedra também não.": {
+    "en": "Neither does stone.",
+    "fr": "La pierre non plus."
+  },
+  "O processo": {
+    "en": "The process",
+    "fr": "Le processus"
+  },
+  "A pedra é natural.": {
+    "en": "The stone is natural.",
+    "fr": "La pierre est naturelle."
+  },
+  "O espaço é seu.": {
+    "en": "The space is yours.",
+    "fr": "L’espace vous appartient."
+  },
+  "Etapas de cada trabalho": {
+    "en": "Stages of each project",
+    "fr": "Les étapes de chaque réalisation"
+  },
+  "Análise": {
+    "en": "Analysis",
+    "fr": "Analyse"
+  },
+  "Aconselhamento": {
+    "en": "Advice",
+    "fr": "Conseil"
+  },
+  "Corte": {
+    "en": "Cutting",
+    "fr": "Découpe"
+  },
+  "Acabamento": {
+    "en": "Finish",
+    "fr": "Finition"
+  },
+  "Solução final": {
+    "en": "Final result",
+    "fr": "Résultat final"
+  },
+  "A pedra natural reflete": {
+    "en": "Natural stone reflects",
+    "fr": "La pierre naturelle reflète"
+  },
+  "a singularidade da natureza.": {
+    "en": "the uniqueness of nature.",
+    "fr": "le caractère unique de la nature."
+  },
+  "Cada projeto nasce de uma relação única": {
+    "en": "Every project begins with a unique relationship",
+    "fr": "Chaque projet naît d’une relation unique"
+  },
+  "entre matéria e espaço.": {
+    "en": "between matter and space.",
+    "fr": "entre matière et espace."
+  },
+  "Cada projeto nasce de uma relação": {
+    "en": "Every project connects",
+    "fr": "Chaque projet relie"
+  },
+  "única entre matéria e espaço.": {
+    "en": "matter and space in its own way.",
+    "fr": "la matière et l’espace à sa façon."
+  },
+  "Ver projetos": {
+    "en": "View projects",
+    "fr": "Voir les projets"
+  },
+  "Infinity Stone — Pedra natural": {
+    "en": "Infinity Stone — Natural stone",
+    "fr": "Infinity Stone — Pierre naturelle"
+  },
+  "carrossel": {
+    "en": "carousel",
+    "fr": "carrousel"
+  },
+  "Ainda não existem projetos publicados.": {
+    "en": "No projects have been published yet.",
+    "fr": "Aucun projet n’est encore publié."
+  },
+  "Projetos Infinity Stone": {
+    "en": "Infinity Stone projects",
+    "fr": "Projets Infinity Stone"
+  },
+  "Projeto anterior": {
+    "en": "Previous project",
+    "fr": "Projet précédent"
+  },
+  "Projeto seguinte": {
+    "en": "Next project",
+    "fr": "Projet suivant"
+  },
+  "Ver projeto — {title}": {
+    "en": "View project — {title}",
+    "fr": "Voir le projet — {title}"
+  },
+  "Projeto {current} de {total}": {
+    "en": "Project {current} of {total}",
+    "fr": "Projet {current} sur {total}"
+  },
+  "Todos os projetos": {
+    "en": "All projects",
+    "fr": "Tous les projets"
+  },
+  "{title} — fotografia {number}": {
+    "en": "{title} — photograph {number}",
+    "fr": "{title} — photo {number}"
+  },
+  "Mostrar fotografia {number}": {
+    "en": "Show photograph {number}",
+    "fr": "Afficher la photo {number}"
+  },
+  "Fotografias do projeto": {
+    "en": "Project photographs",
+    "fr": "Photos du projet"
+  },
+  "Projeto · Infinity Stone": {
+    "en": "Project · Infinity Stone",
+    "fr": "Projet · Infinity Stone"
+  },
+  "Materiais do projeto": {
+    "en": "Project materials",
+    "fr": "Matériaux du projet"
+  },
+  "Materiais": {
+    "en": "Materials",
+    "fr": "Matériaux"
+  },
+  "Material": {
+    "en": "Material",
+    "fr": "Matériau"
+  },
+  "Selecionar material": {
+    "en": "Select material",
+    "fr": "Choisir un matériau"
+  },
+  "Amostra de {name}": {
+    "en": "Sample of {name}",
+    "fr": "Échantillon de {name}"
+  },
+  "Formato": {
+    "en": "Format",
+    "fr": "Format"
+  },
+  "Espessura": {
+    "en": "Thickness",
+    "fr": "Épaisseur"
+  },
+  "A pedra é natural,": {
+    "en": "The stone is natural,",
+    "fr": "La pierre est naturelle,"
+  },
+  "mas o espaço é seu.": {
+    "en": "but the space is yours.",
+    "fr": "mais l’espace vous appartient."
+  },
+  "Ver no mapa": {
+    "en": "View on map",
+    "fr": "Voir sur la carte"
+  },
+  "Enviar mensagem": {
+    "en": "Send message",
+    "fr": "Envoyer le message"
+  },
+  "Nome *": {
+    "en": "Name *",
+    "fr": "Nom *"
+  },
+  "Email *": {
+    "en": "Email *",
+    "fr": "E-mail *"
+  },
+  "O seu nome": {
+    "en": "Your name",
+    "fr": "Votre nom"
+  },
+  "O seu email": {
+    "en": "Your email",
+    "fr": "Votre e-mail"
+  },
+  "O seu telefone": {
+    "en": "Your phone number",
+    "fr": "Votre téléphone"
+  },
+  "Assunto": {
+    "en": "Subject",
+    "fr": "Objet"
+  },
+  "Assunto da mensagem": {
+    "en": "Message subject",
+    "fr": "Objet du message"
+  },
+  "Mensagem *": {
+    "en": "Message *",
+    "fr": "Message *"
+  },
+  "A sua mensagem": {
+    "en": "Your message",
+    "fr": "Votre message"
+  },
+  "Concordo com o tratamento dos meus dados para efeitos de contacto. *": {
+    "en": "I agree to the processing of my data for contact purposes. *",
+    "fr": "J’accepte le traitement de mes données à des fins de contact. *"
+  },
+  "Email preparado. Conclua o envio na sua aplicação de email, ou escreva para geral@infinitystone.com.pt.": {
+    "en": "Email ready. Complete sending in your email application, or write to geral@infinitystone.com.pt.",
+    "fr": "E-mail préparé. Finalisez l’envoi dans votre messagerie ou écrivez à geral@infinitystone.com.pt."
+  },
+  "Nome": {
+    "en": "Name",
+    "fr": "Nom"
+  },
+  "Contacto": {
+    "en": "Contact",
+    "fr": "Contact"
+  },
+  "A verificar sessão…": {
+    "en": "Checking session…",
+    "fr": "Vérification de la session…"
+  },
+  "Infinity Stone · Administração": {
+    "en": "Infinity Stone · Administration",
+    "fr": "Infinity Stone · Administration"
+  },
+  "Área": {
+    "en": "Private",
+    "fr": "Espace"
+  },
+  "reservada.": {
+    "en": "area.",
+    "fr": "privé."
+  },
+  "Inicie sessão para gerir os conteúdos da Infinity Stone.": {
+    "en": "Sign in to manage Infinity Stone content.",
+    "fr": "Connectez-vous pour gérer les contenus d’Infinity Stone."
+  },
+  "Iniciar sessão": {
+    "en": "Sign in",
+    "fr": "Connexion"
+  },
+  "Utilizador": {
+    "en": "Username",
+    "fr": "Identifiant"
+  },
+  "Palavra-passe": {
+    "en": "Password",
+    "fr": "Mot de passe"
+  },
+  "A entrar…": {
+    "en": "Signing in…",
+    "fr": "Connexion en cours…"
+  },
+  "Entrar": {
+    "en": "Sign in",
+    "fr": "Se connecter"
+  },
+  "Gestão de": {
+    "en": "Content",
+    "fr": "Gestion des"
+  },
+  "conteúdos.": {
+    "en": "management.",
+    "fr": "contenus."
+  },
+  "Terminar sessão": {
+    "en": "Sign out",
+    "fr": "Se déconnecter"
+  },
+  "Alterações guardadas.": {
+    "en": "Changes saved.",
+    "fr": "Modifications enregistrées."
+  },
+  "Entrada eliminada.": {
+    "en": "Entry deleted.",
+    "fr": "Contenu supprimé."
+  },
+  "Editar entrada": {
+    "en": "Edit entry",
+    "fr": "Modifier le contenu"
+  },
+  "Nova entrada": {
+    "en": "New entry",
+    "fr": "Nouveau contenu"
+  },
+  "Cancelar edição": {
+    "en": "Cancel editing",
+    "fr": "Annuler la modification"
+  },
+  "Título": {
+    "en": "Title",
+    "fr": "Titre"
+  },
+  "Tipo": {
+    "en": "Type",
+    "fr": "Type"
+  },
+  "Descrição": {
+    "en": "Description",
+    "fr": "Description"
+  },
+  "Publicado no catálogo": {
+    "en": "Published in the catalogue",
+    "fr": "Publié dans le catalogue"
+  },
+  "Pré-visualização da imagem": {
+    "en": "Image preview",
+    "fr": "Aperçu de l’image"
+  },
+  "Escolher imagem": {
+    "en": "Choose image",
+    "fr": "Choisir une image"
+  },
+  "JPG, PNG ou WebP · Até 5 MB": {
+    "en": "JPG, PNG or WebP · Up to 5 MB",
+    "fr": "JPG, PNG ou WebP · Jusqu’à 5 Mo"
+  },
+  "Ou usar imagem demonstrativa": {
+    "en": "Or use a demo image",
+    "fr": "Ou utiliser une image de démonstration"
+  },
+  "Imagem carregada": {
+    "en": "Uploaded image",
+    "fr": "Image importée"
+  },
+  "Textura": {
+    "en": "Texture",
+    "fr": "Texture"
+  },
+  "Pedra": {
+    "en": "Stone",
+    "fr": "Pierre"
+  },
+  "Interior": {
+    "en": "Interior",
+    "fr": "Intérieur"
+  },
+  "A guardar…": {
+    "en": "Saving…",
+    "fr": "Enregistrement…"
+  },
+  "Guardar alterações": {
+    "en": "Save changes",
+    "fr": "Enregistrer les modifications"
+  },
+  "Cancelar": {
+    "en": "Cancel",
+    "fr": "Annuler"
+  },
+  "Publicado": {
+    "en": "Published",
+    "fr": "Publié"
+  },
+  "Rascunho": {
+    "en": "Draft",
+    "fr": "Brouillon"
+  },
+  "Ainda não existem entradas. Crie a primeira.": {
+    "en": "No entries yet. Create the first one.",
+    "fr": "Aucun contenu pour le moment. Créez le premier."
+  },
+  "Eliminar entrada?": {
+    "en": "Delete entry?",
+    "fr": "Supprimer ce contenu ?"
+  },
+  "Eliminar": {
+    "en": "Delete",
+    "fr": "Supprimer"
+  },
+  "{count} entradas": {
+    "en": "{count} entries",
+    "fr": "{count} contenus"
+  },
+  "Editar {title}": {
+    "en": "Edit {title}",
+    "fr": "Modifier {title}"
+  },
+  "Eliminar {title}": {
+    "en": "Delete {title}",
+    "fr": "Supprimer {title}"
+  },
+  "“{title}” será removido do catálogo. Esta ação não pode ser anulada.": {
+    "en": "“{title}” will be removed from the catalogue. This cannot be undone.",
+    "fr": "« {title} » sera supprimé du catalogue. Cette action est irréversible."
+  },
+  "A imagem deve ter no máximo 5 MB.": {
+    "en": "The image must be no larger than 5 MB.",
+    "fr": "L’image ne doit pas dépasser 5 Mo."
+  },
+  "Não foi possível carregar a imagem.": {
+    "en": "Unable to upload the image.",
+    "fr": "Impossible d’importer l’image."
+  },
+  "Pode adicionar até 20 fotografias.": {
+    "en": "You can add up to 20 photographs.",
+    "fr": "Vous pouvez ajouter jusqu’à 20 photos."
+  },
+  "Cada imagem deve ter no máximo 5 MB.": {
+    "en": "Each image must be no larger than 5 MB.",
+    "fr": "Chaque image ne doit pas dépasser 5 Mo."
+  },
+  "Fotografias e materiais do projeto": {
+    "en": "Project photographs and materials",
+    "fr": "Photos et matériaux du projet"
+  },
+  "A imagem principal é a capa. Acrescente outras fotografias e os materiais utilizados.": {
+    "en": "The main image is the cover. Add more photographs and the materials used.",
+    "fr": "L’image principale sert de couverture. Ajoutez d’autres photos et les matériaux utilisés."
+  },
+  "Adicionar fotografias": {
+    "en": "Add photographs",
+    "fr": "Ajouter des photos"
+  },
+  "Nome do material": {
+    "en": "Material name",
+    "fr": "Nom du matériau"
+  },
+  "Remover imagem do material": {
+    "en": "Remove material image",
+    "fr": "Supprimer l’image du matériau"
+  },
+  "Fotografia do material": {
+    "en": "Material photograph",
+    "fr": "Photo du matériau"
+  },
+  "Remover material": {
+    "en": "Remove material",
+    "fr": "Supprimer le matériau"
+  },
+  "Adicionar material": {
+    "en": "Add material",
+    "fr": "Ajouter un matériau"
+  },
+  "Fotografia adicional {number}": {
+    "en": "Additional photograph {number}",
+    "fr": "Photographie supplémentaire {number}"
+  },
+  "Remover fotografia {number}": {
+    "en": "Remove photograph {number}",
+    "fr": "Supprimer la photographie {number}"
+  },
+  "Idioma": {
+    "en": "Language",
+    "fr": "Langue"
+  },
+  "Traduzir e rever": {
+    "en": "Translate and review",
+    "fr": "Traduire et réviser"
+  },
+  "Voltar à gestão": {
+    "en": "Back to management",
+    "fr": "Retour à la gestion"
+  },
+  "Textos do site": {
+    "en": "Website text",
+    "fr": "Textes du site"
+  },
+  "Conteúdo": {
+    "en": "Content",
+    "fr": "Contenu"
+  },
+  "Idioma de destino": {
+    "en": "Target language",
+    "fr": "Langue cible"
+  },
+  "Português original": {
+    "en": "Original Portuguese",
+    "fr": "Portugais original"
+  },
+  "Tradução": {
+    "en": "Translation",
+    "fr": "Traduction"
+  },
+  "Gerar proposta": {
+    "en": "Generate draft",
+    "fr": "Générer une proposition"
+  },
+  "A traduzir…": {
+    "en": "Translating…",
+    "fr": "Traduction en cours…"
+  },
+  "Guardar rascunho": {
+    "en": "Save draft",
+    "fr": "Enregistrer le brouillon"
+  },
+  "Publicar revisão": {
+    "en": "Publish reviewed translation",
+    "fr": "Publier la traduction révisée"
+  },
+  "Traduções": {
+    "en": "Translations",
+    "fr": "Traductions"
+  },
+  "Pesquisar texto": {
+    "en": "Search text",
+    "fr": "Rechercher un texte"
+  },
+  "Sem tradução": {
+    "en": "Not translated",
+    "fr": "Non traduit"
+  },
+  "Original alterado — rever": {
+    "en": "Source changed — review needed",
+    "fr": "Original modifié — à réviser"
+  },
+  "Tradução de base": {
+    "en": "Default translation",
+    "fr": "Traduction par défaut"
+  },
+  "Reveja as propostas antes de publicar. Guardar um rascunho não altera o site.": {
+    "en": "Review drafts before publishing. Saving a draft does not change the website.",
+    "fr": "Révisez les propositions avant publication. Enregistrer un brouillon ne modifie pas le site."
+  },
+  "A tradução automática de novos conteúdos requer DEEPL_API_KEY no servidor.": {
+    "en": "Automatic translation of new content requires DEEPL_API_KEY on the server.",
+    "fr": "La traduction automatique des nouveaux contenus nécessite DEEPL_API_KEY sur le serveur."
+  },
+  "As alterações por guardar serão perdidas. Continuar?": {
+    "en": "Unsaved changes will be lost. Continue?",
+    "fr": "Les modifications non enregistrées seront perdues. Continuer ?"
+  },
+  "Proposta gerada. Reveja e publique quando estiver pronta.": {
+    "en": "Draft generated. Review and publish when ready.",
+    "fr": "Proposition générée. Révisez-la puis publiez-la."
+  },
+  "Rascunho guardado.": {
+    "en": "Draft saved.",
+    "fr": "Brouillon enregistré."
+  },
+  "Revisão publicada.": {
+    "en": "Reviewed translation published.",
+    "fr": "Traduction révisée publiée."
+  },
+  "Preencha as traduções antes de publicar.": {
+    "en": "Fill in the translations before publishing.",
+    "fr": "Complétez les traductions avant de publier."
+  },
+  "Selecione um texto para traduzir.": {
+    "en": "Select some text to translate.",
+    "fr": "Sélectionnez un texte à traduire."
+  },
+  "Inicie sessão para continuar.": {
+    "en": "Please sign in to continue.",
+    "fr": "Connectez-vous pour continuer."
+  },
+  "Origem não autorizada.": {
+    "en": "Origin not allowed.",
+    "fr": "Origine non autorisée."
+  },
+  "Utilizador ou palavra-passe incorretos.": {
+    "en": "Incorrect username or password.",
+    "fr": "Identifiant ou mot de passe incorrect."
+  },
+  "Demasiadas tentativas. Tente novamente dentro de 15 minutos.": {
+    "en": "Too many attempts. Try again in 15 minutes.",
+    "fr": "Trop de tentatives. Réessayez dans 15 minutes."
+  },
+  "Dados de acesso inválidos.": {
+    "en": "Invalid login details.",
+    "fr": "Identifiants invalides."
+  },
+  "Verifique os campos e a imagem.": {
+    "en": "Check the fields and image.",
+    "fr": "Vérifiez les champs et l’image."
+  },
+  "Entrada não encontrada.": {
+    "en": "Entry not found.",
+    "fr": "Contenu introuvable."
+  },
+  "Imagem inválida.": {
+    "en": "Invalid image.",
+    "fr": "Image non valide."
+  },
+  "Escolha uma imagem JPG, PNG ou WebP.": {
+    "en": "Choose a JPG, PNG or WebP image.",
+    "fr": "Choisissez une image JPG, PNG ou WebP."
+  },
+  "Imagem inválida ou superior a 5 MB.": {
+    "en": "Invalid image or larger than 5 MB.",
+    "fr": "Image non valide ou supérieure à 5 Mo."
+  },
+  "A imagem excede o limite permitido.": {
+    "en": "The image exceeds the allowed limit.",
+    "fr": "L’image dépasse la limite autorisée."
+  },
+  "Não foi possível concluir. Tente novamente.": {
+    "en": "Unable to complete. Please try again.",
+    "fr": "Impossible de terminer. Veuillez réessayer."
+  },
+  "Recurso não encontrado.": {
+    "en": "Resource not found.",
+    "fr": "Ressource introuvable."
+  },
+  "Somos especializados na produção e corte de pedra natural, desenvolvendo soluções à medida para construção, decoração e design de interiores e exteriores. Trabalhamos cada material de acordo com as exigências de cada aplicação, combinando experiência, tecnologia e conhecimento técnico para garantir um resultado cuidado em todas as etapas.": {
+    "en": "We specialise in the production and cutting of natural stone, developing bespoke solutions for construction, decoration, and interior and exterior design. We work each material to suit its intended application, combining experience, technology and technical expertise to deliver a carefully crafted result at every stage.",
+    "fr": "Nous sommes spécialisés dans la production et la découpe de pierre naturelle, avec des solutions sur mesure pour la construction, la décoration et l’aménagement intérieur et extérieur. Nous travaillons chaque matériau selon les exigences de son application, en associant expérience, technologie et savoir-faire technique pour garantir un résultat soigné à chaque étape."
+  },
+  "Trabalhamos cada pedra como um elemento capaz de definir a identidade de um espaço. Os veios, as tonalidades e as texturas tornam cada material único, permitindo-nos criar soluções que reforçam o carácter de cada ambiente.": {
+    "en": "We work each stone as an element that can define the identity of a space. Veins, shades and textures make every material unique, allowing us to create solutions that enhance the character of each setting.",
+    "fr": "Nous travaillons chaque pierre comme un élément capable de définir l’identité d’un espace. Les veines, les nuances et les textures rendent chaque matériau unique et nous permettent de créer des solutions qui renforcent le caractère de chaque lieu."
+  },
+  "Cada trabalho começa pela compreensão do que é necessário. A partir daí, ajudamos a identificar as soluções mais adequadas ao material, às medidas, ao acabamento e à aplicação pretendida, preparando cada peça para o resultado final.": {
+    "en": "Every project starts with understanding what is needed. From there, we help identify the best solutions for the material, dimensions, finish and intended application, preparing each piece for the final result.",
+    "fr": "Chaque réalisation commence par la compréhension des besoins. Nous vous aidons ensuite à identifier les solutions les mieux adaptées au matériau, aux dimensions, à la finition et à l’application souhaitée, en préparant chaque pièce pour le résultat final."
+  },
+  "Fale connosco e descubra como podemos ajudá-lo a desenvolver soluções adaptadas às suas necessidades e ao resultado que procura.": {
+    "en": "Get in touch to discover how we can help develop solutions tailored to your needs and the result you are looking for.",
+    "fr": "Contactez-nous pour découvrir comment nous pouvons vous aider à développer des solutions adaptées à vos besoins et au résultat recherché."
+  },
+  "DA NATUREZA NASCE A MATÉRIA. DA TRANSFORMAÇÃO NASCE O ESPAÇO.": {
+    "en": "MATTER IS BORN FROM NATURE. SPACE IS BORN FROM TRANSFORMATION.",
+    "fr": "DE LA NATURE NAÎT LA MATIÈRE. DE LA TRANSFORMATION NAÎT L’ESPACE."
+  },
+  "Avenida São Romão, n.º 177, 4935-546 Neiva — abrir direções no Google Maps (nova janela)": {
+    "en": "Avenida São Romão, no. 177, 4935-546 Neiva — open directions in Google Maps (new window)",
+    "fr": "Avenida São Romão, nº 177, 4935-546 Neiva — ouvrir l’itinéraire dans Google Maps (nouvelle fenêtre)"
+  },
+  "Existem alterações por guardar. Deseja sair?": {
+    "en": "You have unsaved changes. Leave anyway?",
+    "fr": "Des modifications ne sont pas enregistrées. Voulez-vous quitter ?"
+  },
+  "Proposta gerada. Reveja antes de publicar.": {
+    "en": "Draft generated. Review before publishing.",
+    "fr": "Proposition générée. Relisez-la avant de publier."
+  },
+  "As propostas ficam em rascunho. Publique apenas depois de rever.": {
+    "en": "Translations remain drafts until you review and publish them.",
+    "fr": "Les traductions restent des brouillons jusqu’à leur révision et publication."
+  },
+  "Os textos do site já têm tradução de base. Para gerar propostas de projetos, configure DEEPL_API_KEY no servidor.": {
+    "en": "Site text already has default translations. To generate project translations, configure DEEPL_API_KEY on the server.",
+    "fr": "Les textes du site disposent déjà de traductions. Pour traduire les projets, configurez DEEPL_API_KEY sur le serveur."
+  },
+  "Substituir as alterações pela nova proposta?": {
+    "en": "Replace your changes with the new draft?",
+    "fr": "Remplacer vos modifications par la nouvelle proposition ?"
+  },
+  "A carregar…": {
+    "en": "Loading…",
+    "fr": "Chargement…"
+  },
+  "Idioma inválido.": {
+    "en": "Invalid language.",
+    "fr": "Langue non valide."
+  },
+  "Traduções inválidas.": {
+    "en": "Check the translation fields.",
+    "fr": "Vérifiez les champs de traduction."
+  },
+  "O original foi alterado. Atualize antes de traduzir.": {
+    "en": "The original has changed. Reload before translating.",
+    "fr": "Le texte original a changé. Actualisez avant de traduire."
+  },
+  "Configure DEEPL_API_KEY no servidor para gerar traduções de projetos.": {
+    "en": "Configure DEEPL_API_KEY on the server to generate project translations.",
+    "fr": "Configurez DEEPL_API_KEY sur le serveur pour traduire les projets."
+  },
+  "Já existe uma tradução em curso. Tente novamente.": {
+    "en": "A translation is already in progress. Try again.",
+    "fr": "Une traduction est déjà en cours. Réessayez."
+  },
+  "Não foi possível gerar a tradução. Verifique a configuração e a quota DeepL.": {
+    "en": "Unable to generate the translation. Check the DeepL configuration and quota.",
+    "fr": "Impossible de générer la traduction. Vérifiez la configuration et le quota DeepL."
+  },
+  "Mármore": {
+    "en": "Marble",
+    "fr": "Marbre"
+  },
+  "Calcário": {
+    "en": "Limestone",
+    "fr": "Calcaire"
+  },
+  "Granito": {
+    "en": "Granite",
+    "fr": "Granit"
+  },
+  "Email": {
+    "en": "Email",
+    "fr": "E-mail"
+  },
+  "Contacto — {name}": {
+    "en": "Enquiry — {name}",
+    "fr": "Demande — {name}"
+  },
+  "Mensagem": {
+    "en": "Message",
+    "fr": "Message"
+  },
+  "{title} será removido do catálogo. Esta ação não pode ser anulada.": {
+    "en": "{title} will be removed from the catalogue. This action cannot be undone.",
+    "fr": "{title} sera supprimé du catalogue. Cette action est irréversible."
+  },
+  "Mantenha os campos entre chavetas na tradução.": {
+    "en": "Keep the placeholders in braces in the translation.",
+    "fr": "Conservez les champs entre accolades dans la traduction."
+  }
+}

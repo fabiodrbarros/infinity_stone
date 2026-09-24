@@ -13,6 +13,7 @@ COPY --from=builder --chown=node:node /app/package.json ./
 COPY --from=builder --chown=node:node /app/node_modules ./node_modules
 COPY --from=builder --chown=node:node /app/dist ./dist
 COPY --from=builder --chown=node:node /app/server ./server
+COPY --from=builder --chown=node:node /app/shared ./shared
 USER node
 EXPOSE 3000
 CMD ["node", "server/index.js", "--production"]
