@@ -28,7 +28,7 @@ export default function ProjectsGallery({items}){
   if(!selected)return <section className="projects-empty"><p>Ainda não existem projetos publicados.</p></section>;
   const slots=projects.length===1?[0]:Array.from({length:5},(_,i)=>Math.floor(position)-2+i);
   return <section className="projects-gallery" aria-label="Projetos Infinity Stone" onKeyDown={event=>{if(event.altKey||event.ctrlKey||event.metaKey||event.repeat)return;if(['ArrowLeft','ArrowRight'].includes(event.key)){event.preventDefault();go(event.key==='ArrowRight'?1:-1);}}}>
-    <h1 className="projects-page-title">Cada projeto nasce de uma relação única<br/><span>entre matéria e espaço.</span></h1>
+    <h1 className="projects-page-title"><span className="projects-page-heading-desktop">Cada projeto nasce de uma relação única<br/><span>entre matéria e espaço.</span></span><span className="projects-page-heading-mobile">Cada projeto nasce de uma relação<br/><span>única entre matéria e espaço.</span></span></h1>
     <div className="projects-page-stage" ref={stage} style={{height:380*size.scale}} role="region" aria-roledescription="carrossel" aria-label="Projetos" tabIndex={0} aria-busy={busy}
       onTouchStart={e=>{touch.current=e.touches.length===1?{x:e.touches[0].clientX,y:e.touches[0].clientY}:null;}}
       onTouchEnd={e=>{if(!touch.current)return;const dx=touch.current.x-e.changedTouches[0].clientX,dy=touch.current.y-e.changedTouches[0].clientY;touch.current=null;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)){suppressClick.current=Date.now()+500;go(dx>0?1:-1);}}}>

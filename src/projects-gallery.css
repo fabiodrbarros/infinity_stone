@@ -18,3 +18,7 @@ main:has(>.projects-gallery){width:100%}
 .projects-page-counter{display:flex;justify-content:center;gap:8px;margin:0;font-size:12px;font-variant-numeric:tabular-nums;letter-spacing:.1em;color:#6a6a70}
 .projects-page-counter span:first-child{color:#171719}
 @media(max-width:700px){.projects-gallery{padding:120px 64px 80px;gap:28px}.projects-page-title{font-size:18px}.projects-page-controls{left:-52px;right:-52px}}
+
+.projects-page-title .projects-page-heading-desktop,.projects-page-title .projects-page-heading-mobile{color:#171719}
+.projects-page-heading-mobile{display:none}
+@media(max-width:700px){.projects-page-title{width:calc(100vw - 40px);font-size:clamp(18px,5.5vw,24px);text-transform:none;white-space:nowrap}.projects-page-heading-desktop{display:none}.projects-page-heading-mobile{display:inline}}

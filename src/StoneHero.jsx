@@ -170,7 +170,7 @@ export default function StoneHero({items=[]}){
         <div className="stone-scene">
           <img className="wordmark" src="/assets/hero-animation/0.png" alt="" width="302" height="87"/>
           <div className="material-title" aria-hidden="true">A pedra natural reflete<br/><span>a singularidade da natureza.</span></div>
-          <h2 className="projects-title"><span className="projects-heading-desktop">Cada projeto nasce de uma relação única<br/><span>entre matéria e espaço.</span></span><span className="projects-heading-mobile">Cada projeto nasce de uma<br/><span>relação única entre matéria e espaço.</span></span></h2>
+          <h2 className="projects-title"><span className="projects-heading-desktop">Cada projeto nasce de uma relação única<br/><span>entre matéria e espaço.</span></span><span className="projects-heading-mobile">Cada projeto nasce de uma relação<br/><span>única entre matéria e espaço.</span></span></h2>
           <div className="stone-pieces" aria-hidden="true">{textures.map((url,i)=><div className="piece" key={url}>
             <div className="edge"/><div className="surface first" style={{backgroundImage:`url(${url})`}}/>
             <div className="surface finish" style={{backgroundImage:`url(${finalTextures[i]})`}}/>
