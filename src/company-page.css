@@ -21,8 +21,8 @@ main:has(>.company-story){width:100%;overflow:visible}
 .company-chapter p{font-size:15px;line-height:1.8;color:#454549;max-width:430px;margin:0 0 18px}
 .company-signature{border-top:1px solid #17171920;margin-top:30px;padding-top:20px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;line-height:2;color:#65625c}
 .company-signature span{padding:0 8px}
-.company-emblem{grid-column:2;grid-row:1 / span 3;position:sticky;top:20svh;align-self:start;height:60svh;display:flex;align-items:center;justify-content:center;margin:20svh 0 0;perspective:1000px}
-.company-emblem img{display:block;width:min(100%,480px);height:auto;object-fit:contain;filter:drop-shadow(12px 20px 18px #2e271e18);will-change:transform}
+.company-emblem{grid-column:2;grid-row:1 / span 3;position:sticky;top:20svh;align-self:start;height:60svh;display:flex;align-items:center;justify-content:center;margin:20svh 0 0}
+.company-emblem img{display:block;width:min(100%,480px);height:auto;object-fit:contain;filter:drop-shadow(12px 20px 18px #2e271e18)}
 .company-text-link{align-self:flex-start;display:inline-flex;align-items:center;gap:28px;border-bottom:1px solid #17171950;padding:14px 0;margin-top:12px;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
 .company-contact.button{align-self:flex-start;background:#171719;color:white;box-shadow:none;min-height:52px;padding:16px 18px;margin-top:16px;gap:44px}
 .company-process{display:flex;flex-wrap:wrap;gap:24px 12px;list-style:none;margin:8px 0 12px;padding:24px 0 0;border-top:1px solid #17171920}

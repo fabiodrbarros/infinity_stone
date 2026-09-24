@@ -21,7 +21,7 @@ export default function CompanyPage(){
     const chapters=[...root.current.querySelectorAll('.company-chapter')];
     const clamp=value=>Math.max(0,Math.min(1,value));
     const ease=value=>value*value*(3-2*value);
-    let frame=0;
+    let frame=0,lastTransform='';
     function draw(){
       frame=0;
       const mobile=innerWidth<=700;
@@ -33,12 +33,13 @@ export default function CompanyPage(){
       const distance=mobile?(mark.current.parentElement.clientWidth-mark.current.clientWidth)/2:
         chapters[1].offsetLeft-chapters[0].offsetLeft;
       // Move one intact, upright logo between the two columns.
-      const x=mobile?distance*(1-2*second+2*third):distance*(-second+third);
-      const emblem=mark.current.parentElement;
+      const rawX=mobile?distance*(1-2*second+2*third):distance*(-second+third);
+      const pixelRatio=window.devicePixelRatio||1;
+      const x=Math.round(rawX*pixelRatio)/pixelRatio;
       const leaving=Math.max(0,-chapters[2].getBoundingClientRect().top);
-      // Hold the logo in place while leaving the last chapter, then fade it out.
-      const y=leaving>0?Math.max(0,parseFloat(getComputedStyle(emblem).top)-emblem.getBoundingClientRect().top):0;
-      mark.current.style.transform=`translate3d(${x}px,${y}px,0)`;
+      // Sticky owns the vertical position; avoid feeding its measurements back into a transform.
+      const transform=`translateX(${x}px)`;
+      if(transform!==lastTransform){mark.current.style.transform=transform;lastTransform=transform;}
       mark.current.style.opacity=preference.matches?Number(leaving<=2):1-ease(clamp(leaving/100));
       mark.current.style.visibility=leaving>=100?'hidden':'visible';
       chapters.slice(1).forEach((chapter,index)=>{
