@@ -18,7 +18,7 @@ export function LanguageProvider({children}){
     return {...item,title:field('title',item.title),description:field('description',item.description),material:field('material',item.material),materials:item.materials?.map((m,i)=>({...m,...Object.fromEntries(['name','format','finish','thickness'].map(k=>[k,field(`materials.${i}.${k}`,m[k])]))}))};
   },[locale,translate,t]);
   const refresh=useCallback(()=>setRevision(n=>n+1),[]);
-  useEffect(()=>{document.querySelector('meta[name="description"]')?.setAttribute('content',t('DA NATUREZA NASCE A MATÉRIA. DA TRANSFORMAÇÃO NASCE O ESPAÇO.'));},[t]);
+  useEffect(()=>{document.querySelectorAll('meta[name="description"],meta[property="og:description"],meta[name="twitter:description"]').forEach(meta=>meta.setAttribute('content',t('Pedra Natural · Transformação · Elegância')));},[t]);
   const value=useMemo(()=>({locale,setLocale,t,translateItem,refresh}),[locale,setLocale,t,translateItem,refresh]);
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }
