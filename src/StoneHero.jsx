@@ -90,8 +90,7 @@ export default function StoneHero({items=[]}){
       lastWheel=now;
       if(document.querySelector('dialog[open]')||!atHero()||!wheelEligible)return;
       const outside=progress>=2&&!overCarousel(event);
-      if(outside&&!busy&&!wheelConsumed){
-        if(event.deltaY>=0)return;
+      if(outside&&event.deltaY<0&&!busy&&!wheelConsumed){
         event.preventDefault();
         wheelTotal+=event.deltaY*(event.deltaMode===1?16:event.deltaMode===2?innerHeight:1);
         if(wheelTotal<=-18){wheelConsumed=true;go(-1,false,true);}
@@ -113,8 +112,7 @@ export default function StoneHero({items=[]}){
       // Home/End retain their normal document navigation semantics.
       if(!direction)return;
       if(keyConsumed===event.key||busy){event.preventDefault();return;}
-      if(progress>=2&&!event.target.closest('.hero-projects,.hero-project-meta')){
-        if(direction>0)return;
+      if(progress>=2&&direction<0&&!event.target.closest('.hero-projects,.hero-project-meta')){
         event.preventDefault();
         if(!event.repeat){keyConsumed=event.key;go(-1,true,true);}
         return;
@@ -128,8 +126,7 @@ export default function StoneHero({items=[]}){
     function touchmove(event){
       if(!touch||event.touches.length!==1||!atHero()||document.querySelector('dialog[open]'))return;
       const dy=touch.y-event.touches[0].clientY,dx=touch.x-event.touches[0].clientX;
-      if(progress>=2&&!touch.inside&&!touch.consumed&&!busy){
-        if(dy>=0||Math.abs(dx)>Math.abs(dy))return;
+      if(progress>=2&&!touch.inside&&dy<0&&Math.abs(dy)>=Math.abs(dx)&&!touch.consumed&&!busy){
         event.preventDefault();
         if(dy<-18){touch.consumed=true;go(-1,false,true);}
         return;

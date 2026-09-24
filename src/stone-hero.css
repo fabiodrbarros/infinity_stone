@@ -33,8 +33,8 @@ main:has(>.stone-hero){width:100%}
 .hero-project-meta[inert]{pointer-events:none}
 @media(max-width:650px){
  .stone-scene .material-title,.stone-scene .projects-title{width:calc((100vw - 40px) / var(--stone-scale));text-transform:none}
- .stone-scene .material-title{font-size:calc(clamp(18px,5vw,22px) / var(--stone-scale));top:-100px;line-height:1.2}
- .stone-scene .projects-title{font-size:calc(clamp(15px,4vw,18px) / var(--stone-scale));top:-100px;line-height:1.3}
+ .stone-scene .material-title{font-size:calc(clamp(20px,5.5vw,24px) / var(--stone-scale));top:-100px;line-height:1.2}
+ .stone-scene .projects-title{font-size:calc(clamp(16px,4.4vw,20px) / var(--stone-scale));top:-100px;line-height:1.3}
  .projects-heading-desktop{display:none}.projects-heading-mobile{display:inline}
 }
 @media(prefers-reduced-motion:reduce){.hero-project-card{will-change:auto}}
