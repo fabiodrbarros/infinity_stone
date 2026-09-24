@@ -23,3 +23,5 @@
 @media(max-width:600px){.site-drawer{width:min(440px,100%)}.drawer-content{padding:28px 28px 22px}.drawer-top img{width:80px}.drawer-links{margin:36px 0 30px;gap:8px}.drawer-links a{font-size:20px}.drawer-contacts{gap:18px}.drawer-bottom{padding-top:36px}}
 @media(max-height:650px){.drawer-links{margin-block:25px;gap:4px}.drawer-top{min-height:65px}.drawer-top img{width:65px}.drawer-bottom{padding-top:28px}}
 @media(prefers-reduced-motion:reduce){.site-drawer::backdrop{backdrop-filter:none}}
+
+html[data-input="pointer"] .site-drawer :focus{outline:none}
